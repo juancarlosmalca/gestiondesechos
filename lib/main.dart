@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       //backgroundColor: Color(0xFFf7f7f7),
       body: Center(
-        child: Image.asset('assets/imagenes/msplogo.jpg', width: 250, height: 250),
+        child: Image.asset('assets/imagenes/logomsp.png', width: 250, height: 250),
       ),
     );
   }

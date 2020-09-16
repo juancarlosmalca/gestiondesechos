@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gestiondesechos/paginas_desechos/desechos.dart';
-import 'package:gestiondesechos/paginas_desechos/desechos1.dart';
 import 'package:gestiondesechos/constantes.dart';
 import 'package:gestiondesechos/paginas_solucion/solucion.dart';
-import 'package:gestiondesechos/paginas_solucion/solucion1.dart';
+import 'package:gestiondesechos/pantallas/registro.dart';
 
 class Principal extends StatefulWidget {
   @override
@@ -112,14 +111,14 @@ class _MyHomePageState extends State<Principal> {
                       ),
                       GestureDetector(
                         onTap: () {
-                         /* Navigator.push(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return Manejodesechos();
+                                return Registro();
                               },
                             ),
-                          );*/
+                          );
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(
@@ -168,7 +167,7 @@ class _MyHomePageState extends State<Principal> {
                       ),
                       GestureDetector(
                         onTap: () {
-                        /*  Navigator.push(
+                          /*  Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
@@ -372,9 +371,7 @@ class BookInfo extends StatelessWidget {
                           )*/
                         ],
                       ),
-
                     ],
-
                   )
                 ],
               )),
