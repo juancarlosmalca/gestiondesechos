@@ -77,7 +77,7 @@ class _Solucion3 extends State<Solucion3> {
                         alignment: Alignment.center,
 
                         child: Text(
-                          "Es el lugar en donde se generan los desechos del paciente infectado, por ejemplo: mascarillas, servilletas, envolturas de comida, pañuelos desechables, etc.",
+                          "Para preparar 1 Litro de solución de hipoclorito de sodio al 1,5 % o 1500 partes por millón (PPM), se deberá colocar 3 cucharadas o 30 mililitros de cloro comercial al 5% en 1 litro de agua.",
                           //maxLines: 5,
                           textAlign: TextAlign.center,
                           style: TextStyle(
