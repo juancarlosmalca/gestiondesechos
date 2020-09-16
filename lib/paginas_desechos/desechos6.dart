@@ -72,7 +72,7 @@ class _Desechos6 extends State<Desechos6> {
                         alignment: Alignment.center,
 
                         child: Text(
-                          "Corresponde a la acción de entregar los desechos hacia el gestor externo; esta actividad deberá ser realizada verificando que las fundas se encuentren integras y bien embaladas o selladas; previa la entrega al carro recolector de desechos sólidos o disposición final en el recipiente de desechos de tu localidad se deberá volver a rosear la solución desinfectante de hipoclorito de sodio.",
+                          " La transferencia de desechos se deberá realizar verificando quen las fundas se encuentren integras y bien embaladas o selladas. Previa entrega de la funda de desechos al carro recolector o al recipiente de desechos de tu localidad rosear la solución desinfectante de hipoclorito de sodio. La transferencia de desechos se deberá realizar verificando quen las fundas se encuentren integras y bien embaladas o selladas. Previa entrega de la funda de desechos al carro recolector o al recipiente de desechos de tu localidad rosear la solución desinfectante de hipoclorito de sodio.",
                           //maxLines: 5,
                           textAlign: TextAlign.center,
                           style: TextStyle(
