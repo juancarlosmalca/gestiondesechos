@@ -70,7 +70,7 @@ class _Solucion4 extends State<Solucion4> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset('assets/imagenes/solucion4.png',
+                      Image.asset('assets/imagenes/solucion04.png',
                           width: 250, height: 250),
                       Container(
                         //width: this.size.width * .6,
