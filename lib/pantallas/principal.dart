@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gestiondesechos/paginas_desechos/desechos.dart';
 import 'package:gestiondesechos/constantes.dart';
 import 'package:gestiondesechos/paginas_solucion/solucion.dart';
+import 'package:gestiondesechos/pantallas/Videos.dart';
 import 'package:gestiondesechos/pantallas/registro.dart';
 
 class Principal extends StatefulWidget {
@@ -115,7 +116,7 @@ class _MyHomePageState extends State<Principal> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return Registro();
+                                return Solucion();
                               },
                             ),
                           );
@@ -142,7 +143,63 @@ class _MyHomePageState extends State<Principal> {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: "Video ",
+                                      text: "Preparación de",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: kBlackColor,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: " Desinfectante",
+                                      style: TextStyle(color: kLightBlackColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                size: 18,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Videos();
+                              },
+                            ),
+                          );
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 30),
+                          margin: EdgeInsets.only(bottom: 16),
+                          width: size.width - 48,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(38.5),
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(0, 10),
+                                blurRadius: 33,
+                                color: Color(0xFFD3D3D3).withOpacity(.84),
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            children: <Widget>[
+                              RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: "Videos",
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: kBlackColor,
@@ -206,63 +263,7 @@ class _MyHomePageState extends State<Principal> {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "tus conocimientos",
-                                      style: TextStyle(color: kLightBlackColor),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Spacer(),
-                              Icon(
-                                Icons.arrow_forward_ios,
-                                size: 18,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return Solucion();
-                              },
-                            ),
-                          );
-                        },
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 30),
-                          margin: EdgeInsets.only(bottom: 16),
-                          width: size.width - 48,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(38.5),
-                            boxShadow: [
-                              BoxShadow(
-                                offset: Offset(0, 10),
-                                blurRadius: 33,
-                                color: Color(0xFFD3D3D3).withOpacity(.84),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            children: <Widget>[
-                              RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: "Preparación ",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: kBlackColor,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: " Desinfectante",
+                                      text: "de conocimientos",
                                       style: TextStyle(color: kLightBlackColor),
                                     ),
                                   ],
@@ -295,9 +296,8 @@ class _MyHomePageState extends State<Principal> {
 
 class BookInfo extends StatelessWidget {
   const BookInfo({
-    Key key,
     this.size,
-  }) : super(key: key);
+  });
 
   final Size size;
 

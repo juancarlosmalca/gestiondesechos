@@ -14,7 +14,7 @@ class _HomePageState extends State<informacion> {
   VideoPlayerController _controller;
   @override
   void initState() {
-    _controller = VideoPlayerController.network('audios/video_intro.mp4')
+    _controller = VideoPlayerController.network('assets/audios/video_intro.mp4')
       ..initialize().then((_) {
         setState(() {});
       });
@@ -45,13 +45,14 @@ class _HomePageState extends State<informacion> {
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("imagenes/portada1.jpg"),
+              image: AssetImage("assets/imagenes/portada1.jpg"),
               fit: BoxFit.cover,
             ),
           ),
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
+
               Container(
                 //height: 300,
                 //color: Colors.red,
@@ -60,7 +61,7 @@ class _HomePageState extends State<informacion> {
               Container(
                 height: 300,
                 //color: Colors.blue,
-                child: Icon(Icons.cancel),
+                child: VideoPlayer(_controller) ,
               ),
               Positioned(
                 left: 16.0,

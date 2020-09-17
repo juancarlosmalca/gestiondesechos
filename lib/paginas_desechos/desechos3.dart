@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gestiondesechos/constantes.dart';
 import 'package:gestiondesechos/paginas_desechos/desechos4.dart';
+import 'package:gestiondesechos/paginas_solucion/solucion.dart';
 
 class Desechos3 extends StatefulWidget {
   @override
@@ -12,6 +13,9 @@ class _Desechos3 extends State<Desechos3> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Paso 3'),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,7 +27,7 @@ class _Desechos3 extends State<Desechos3> {
                   alignment: Alignment.topCenter,
                   padding: EdgeInsets.only(
                       top: 20, left: size.width * .1, right: size.width * .02),
-                  height: size.height * .55,
+                  height: size.height * .45,
                   decoration: BoxDecoration(
                     //color: Colors.blue,
                     image: DecorationImage(
@@ -38,7 +42,7 @@ class _Desechos3 extends State<Desechos3> {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        Container(
+/*                        Container(
                           alignment: Alignment.center,
                           child: Text(
                             "Paso 3: ",
@@ -47,20 +51,23 @@ class _Desechos3 extends State<Desechos3> {
                                 .headline4
                                 .copyWith(fontSize: 28),
                           ),
-                        ),
+                        ),*/
                         Container(
                           margin: EdgeInsets.only(top: 2),
                           alignment: Alignment.center,
                           padding: EdgeInsets.only(top: 0),
                           child: Text(
                             "Acondicionamiento de desechos",
-                            style: Theme.of(context).textTheme.subtitle1.copyWith(fontSize: 20, fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.subtitle1.copyWith(fontSize: 20,
+                              //fontWeight: FontWeight.bold
+                            ),
                           ),
                         ),
                       ]),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: size.height * .30 - 100),
+                  padding: EdgeInsets.only(top: size.height * .20 - 100),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
@@ -80,6 +87,33 @@ class _Desechos3 extends State<Desechos3> {
                             color: kLightBlackColor,
                           ),
                         ),
+                      ),
+                      InkWell(
+                          child: Container(
+                            padding: EdgeInsets.only(
+                                left: 2.0, right: 2.0, top: 0, bottom: 10),
+                            margin: EdgeInsets.only(right: 15.0),
+                            child: Text(
+                              'Revisar como preparar la solución desinfectante',
+                              textAlign: TextAlign.center,
+
+                              style: TextStyle(
+                                  fontSize: 12.0,
+                                  decoration: TextDecoration.underline,
+                                  color: Color(0xFF203573),
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return Solucion();
+                                },
+                              ),
+                            );
+                          },
                       ),
                       GestureDetector(
                         onTap: () {

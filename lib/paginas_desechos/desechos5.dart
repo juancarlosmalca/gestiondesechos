@@ -12,6 +12,9 @@ class _Desechos5 extends State<Desechos5> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Paso 5'),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,7 +26,7 @@ class _Desechos5 extends State<Desechos5> {
                   alignment: Alignment.topCenter,
                   padding: EdgeInsets.only(
                       top: 20, left: size.width * .1, right: size.width * .02),
-                  height: size.height * .55,
+                  height: size.height * .45,
                   decoration: BoxDecoration(
                     //color: Colors.blue,
                     image: DecorationImage(
@@ -38,7 +41,7 @@ class _Desechos5 extends State<Desechos5> {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        Container(
+/*                        Container(
                           alignment: Alignment.center,
                           child: Text(
                             "Paso 5: ",
@@ -47,20 +50,23 @@ class _Desechos5 extends State<Desechos5> {
                                 .headline4
                                 .copyWith(fontSize: 28),
                           ),
-                        ),
+                        ),*/
                         Container(
                           margin: EdgeInsets.only(top: 2),
                           alignment: Alignment.center,
                           padding: EdgeInsets.only(top: 0),
                           child: Text(
                             "Almacenamiento temporal de desechos.",
-                            style: Theme.of(context).textTheme.subtitle1.copyWith(fontSize: 20, fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.subtitle1.copyWith(fontSize: 20,
+                                //fontWeight: FontWeight.bold
+                            ),
                           ),
                         ),
                       ]),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: size.height * .30 - 100),
+                  padding: EdgeInsets.only(top: size.height * .25 - 100),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
