@@ -70,7 +70,7 @@ class _Desechos2 extends State<Desechos2> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset('assets/imagenes/desechos2.png',
+                      Image.asset('assets/imagenes/desechos02.png',
                           width: 250, height: 250),
                       Container(
                         //width: this.size.width * .6,
