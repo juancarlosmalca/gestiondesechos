@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gestiondesechos/paginas_desechos/desechos.dart';
-import 'package:gestiondesechos/constantes.dart';
-import 'package:gestiondesechos/paginas_solucion/solucion.dart';
-import 'package:gestiondesechos/pantallas/Videos.dart';
-import 'package:gestiondesechos/pantallas/registro.dart';
+import 'package:GPGIDCovid19/paginas_desechos/desechos.dart';
+import 'package:GPGIDCovid19/constantes.dart';
+import 'package:GPGIDCovid19/paginas_solucion/solucion.dart';
+import 'package:GPGIDCovid19/pantallas/Videos.dart';
+import 'package:GPGIDCovid19/pantallas/registro.dart';
 
 class Principal extends StatefulWidget {
   @override

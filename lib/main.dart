@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:gestiondesechos/pantallas/informacion.dart';
+import 'package:GPGIDCovid19/pantallas/informacion.dart';
 import 'pantallas/principal.dart';
 void main() {
   runApp(MyApp());

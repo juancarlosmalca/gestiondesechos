@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gestiondesechos/constantes.dart';
-import 'package:gestiondesechos/paginas_desechos/desechos2.dart';
+import 'package:GPGIDCovid19/constantes.dart';
+import 'package:GPGIDCovid19/paginas_desechos/desechos2.dart';
 
 class Desechos1 extends StatefulWidget {
   @override

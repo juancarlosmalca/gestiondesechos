@@ -1,5 +1,5 @@
-name: gestiondesechos
-description: Aplicación móvil para la gestion de desechos de pacientes con COVID-19
+name: GPGIDCovid19
+description: Guía para la gestión interna de desechos de pacientes con COVID-19
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
