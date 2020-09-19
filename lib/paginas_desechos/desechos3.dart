@@ -94,13 +94,13 @@ class _Desechos3 extends State<Desechos3> {
                                 left: 2.0, right: 2.0, top: 0, bottom: 10),
                             margin: EdgeInsets.only(right: 15.0),
                             child: Text(
-                              'Revisar como preparar la solución desinfectante',
+                              'Revisa aqui como preparar la solución desinfectante',
                               textAlign: TextAlign.center,
 
                               style: TextStyle(
                                   fontSize: 12.0,
                                   decoration: TextDecoration.underline,
-                                  color: Color(0xFF203573),
+                                  color: Colors.red,
                                   fontWeight: FontWeight.w600),
                             ),
                           ),

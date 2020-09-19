@@ -78,7 +78,7 @@ class _Desechos6 extends State<Desechos6> {
                         alignment: Alignment.center,
 
                         child: Text(
-                          " La transferencia de desechos se deberá realizar verificando quen las fundas se encuentren integras y bien embaladas o selladas. Previa entrega de la funda de desechos al carro recolector o al recipiente de desechos de tu localidad rosear la solución desinfectante de hipoclorito de sodio. La transferencia de desechos se deberá realizar verificando quen las fundas se encuentren integras y bien embaladas o selladas. Previa entrega de la funda de desechos al carro recolector o al recipiente de desechos de tu localidad rosear la solución desinfectante de hipoclorito de sodio.",
+                          " La transferencia de desechos se deberá realizar verificando quen las fundas se encuentren integras y bien embaladas o selladas. Previa entrega de la funda de desechos al carro recolector o al recipiente de desechos de tu localidad rosear la solución desinfectante de hipoclorito de sodio.",
                           //maxLines: 5,
                           textAlign: TextAlign.center,
                           style: TextStyle(

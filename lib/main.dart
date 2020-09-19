@@ -1,53 +1,86 @@
 import 'dart:async';
+import 'package:GPGIDCovid19/pantallas/inicio.dart';
 import 'package:flutter/material.dart';
 import 'package:GPGIDCovid19/pantallas/informacion.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'pantallas/principal.dart';
+
 void main() {
   runApp(MyApp());
 }
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
+class MyApp extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        // Cuando naveguemos hacia la ruta "/", crearemos el Widget FirstScreen
-        '/informacion': (context) => informacion(),
-      },
-      title: 'Flutter Demo',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+  MyHomePageState createState() => MyHomePageState();
+}
+ class MyHomePageState extends State<MyApp> {
+   Widget _rootpage= Inicio();
+   Future<Widget> getRootPage() async {
+    final prefs = await SharedPreferences.getInstance();
+    final nombre = prefs.getString('nombre');
+    print("nombre");
+    print(nombre);
+    if (nombre == null) {
+       return Inicio();
+    } else {
+      return Principal();
+    }
   }
-}
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+   @override
+    void initState() {
+      super.initState();
+      getRootPage().then((Widget page){
+        setState((){
+          print(getRootPage().toString());
+          _rootpage=page;
+        });
+      });
+    }
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        initialRoute: '/',
+        routes: {
+          // Cuando naveguemos hacia la ruta "/", crearemos el Widget FirstScreen
+          '/informacion': (context) => informacion(),
+          '/principal': (context) => Principal(),
+        },
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        //backgroundColor: Color(0xFFf7f7f7),
+        home: _rootpage,
+      );
+    }
+  }
+
+class _Opcion1 extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  Opcion1 createState() => Opcion1();
 }
-class _MyHomePageState extends State<MyHomePage> {
+
+class Opcion1 extends State<_Opcion1> {
   @override
   void initState() {
     super.initState();
     Timer(
         Duration(seconds: 5),
-            () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => Principal())));
+            () =>
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                    builder: (BuildContext context) => Inicio())));
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color(0xFFf7f7f7),
       body: Center(
-        child: Image.asset('assets/imagenes/logomsp.png', width: 250, height: 250),
+        child: Image.asset(
+            'assets/imagenes/logomsp.png', width: 250, height: 250),
       ),
     );
   }
 }
+
