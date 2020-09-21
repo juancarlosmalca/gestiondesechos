@@ -1,3 +1,4 @@
+import 'package:GPGIDCovid19/pantallas/juego.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:GPGIDCovid19/paginas_desechos/desechos.dart';
@@ -412,20 +413,16 @@ class _MyHomePageState extends State<Principal> {
                       ),
                       GestureDetector(
                         onTap: () {
-/*                            Navigator.push(
+                            Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return Registro();
+                                return Juego();
                               },
                             ),
-                          );*/
+                          );
 
-                          deletedata();
-
-
-
-
+                          //deletedata();
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(
